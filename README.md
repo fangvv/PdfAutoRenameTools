@@ -1,6 +1,7 @@
 # PdfAutoRenameTools
 
-本软件原是王炳宁先生公开在他的[主页]（https://bingning.wang/research/Article/?id=114）上，本人偶遇之，遂常用。但发现它有一个bug，很多paper只能截取第一行，于是通过luyten-0.5.4这个反编译软件得到代码，通过阅读后进行了小小的改动，做了一些简单的修正。
+本软件原是王炳宁先生公开在他的[主页]（https://bingning.wang/research/Article/?id=114）
+上，本人偶遇之，遂常用。但发现它有一个bug，很多paper只能截取第一行，于是通过luyten-0.5.4这个反编译软件得到代码，通过阅读后进行了小小的改动，做了一些简单的修正。
 
 生成的jar文件在\out\artifacts\PdfAutoRenameTools_jar\目录下，使用方法是：
 
