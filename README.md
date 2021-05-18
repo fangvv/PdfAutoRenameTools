@@ -9,7 +9,9 @@ java -jar PdfAutoRenameTools.jar 目录名
 注意需要Java环境的版本要至少是14，以下是我当前用的java版本信息：
 
 java version "14.0.1" 2020-04-14
+
 Java(TM) SE Runtime Environment (build 14.0.1+7)
+
 Java HotSpot(TM) 64-Bit Server VM (build 14.0.1+7, mixed mode, sharing)
 
 如王炳宁先生发现代码公开有不妥之处，可以随时联系我删除。
