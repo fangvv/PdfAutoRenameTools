@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Main {
 
-    private static String GetTitleOfPDF(final String pdfFileName) {
+    public static String GetTitleOfPDF(final String pdfFileName) {
         final File pdfFile = new File(pdfFileName);
         try {
             final PDDocument document = PDDocument.load(pdfFile);
@@ -37,7 +37,7 @@ public class Main {
         }
     }
 
-    private static void change_one_file_name(final String original, final String target) {
+    public static void change_one_file_name(final String original, final String target) {
         final File f = new File(original);
         final String c = f.getParent();
         File mm = new File(c + File.separator + target + ".pdf");
@@ -51,7 +51,7 @@ public class Main {
         System.out.println("rename:" + f.getAbsolutePath() + "\tto\t" + mm.getAbsolutePath());
     }
 
-    private static String clean_file_name(String input) {
+    public static String clean_file_name(String input) {
         input = input.replace("- ", "");
         input = input.replaceAll("\\?|\u3001|\u2572|/|\\*|<|>|:", "_");
         return input;
