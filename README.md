@@ -1,5 +1,7 @@
 # PdfAutoRenameTools
 
+[![GitHub](https://img.shields.io/badge/Project_Homepage-181717?logo=github)](https://github.com/fangvv/PdfAutoRenameTools) — [https://github.com/fangvv/PdfAutoRenameTools](https://github.com/fangvv/PdfAutoRenameTools)
+
 [English README](README_EN.md) | 中文说明
 
 > **你还在手动一篇一篇地给下载的论文 PDF 重命名吗？**
