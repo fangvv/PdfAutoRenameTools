@@ -6,9 +6,10 @@
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>
       <element id="module-output" name="PdfAutoRenameTools" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/commons-logging-1.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/fontbox-3.0.0-RC1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/pdfbox-app-2.0.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/commons-logging-1.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/pdfbox-io-3.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/fontbox-3.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/pdfbox-3.0.8.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

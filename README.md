@@ -18,7 +18,7 @@
 - 📂 **递归批量处理** — 支持递归扫描整个文件夹及其子目录，一次处理所有 PDF
 - 🖥️ **图形界面 + 命令行** — 提供 GUI 和 CLI 两种使用方式，满足不同场景需求
 - ⚡ **并行处理** — 利用 Java 并行流加速，面对大量文献依然高效
-- 🛡️ **安全重命名** — GUI 模式下可先预览改名结果，确认后再执行，避免误操作
+- 🛡️ **安全重命名** — GUI 模式下可先预览改名结果，确认后再执行，避免误操作；文件名已与标题一致的 PDF 自动标记为「无需修改」且默认不勾选
 
 ## 背景
 
@@ -44,7 +44,7 @@ java -jar PdfAutoRenameTools_GUI.jar
 2. 点击 **「扫描 PDF」** — 自动识别每个 PDF 的论文标题，表格实时显示「原文件名 → 新文件名」
 3. 确认无误后点击 **「确认重命名」** — 执行批量重命名
 
-表格中状态以颜色区分：🟢 绿色 = 已重命名，🔴 红色 = 失败或跳过。
+表格中状态以颜色区分：🟢 绿色 = 已重命名，🔴 红色 = 失败或跳过，⚪ 灰色 = 无需修改（文件名已与标题一致，默认不勾选）。
 
 ### 方式二：命令行
 
@@ -80,9 +80,10 @@ src/nlpr/cip/
 
 | 库 | 版本 | 用途 |
 |----|------|------|
-| [Apache PDFBox](https://pdfbox.apache.org/) | 2.0.23 | PDF 文件解析与文本提取 |
-| [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/) | 1.2 | 日志框架 |
-| [FontBox](https://pdfbox.apache.org/) | 3.0.0-RC1 | PDF 字体信息处理 |
+| [Apache PDFBox](https://pdfbox.apache.org/) | 3.0.8 | PDF 文件解析与文本提取 |
+| [FontBox](https://pdfbox.apache.org/) | 3.0.8 | PDF 字体信息处理 |
+| [PDFBox IO](https://pdfbox.apache.org/) | 3.0.8 | PDFBox 3 的随机读取 IO 模块 |
+| [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/) | 1.4.0 | 日志框架 |
 
 ## 编译环境
 
@@ -92,4 +93,4 @@ Java(TM) SE Runtime Environment (build 26.0.1+8-34)
 Java HotSpot(TM) 64-Bit Server VM (build 26.0.1+8-34, mixed mode, sharing)
 ```
 
-运行需要 Java 环境，具体版本请自行配置。
+运行需要 Java 21 及以上（产物以 `--release 21` 编译），具体版本请自行配置。

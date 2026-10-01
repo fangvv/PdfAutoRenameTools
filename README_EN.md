@@ -16,7 +16,7 @@ The tool reads layout information from the first page of each PDF, identifies th
 - **Recursive batch processing** — Scans an entire folder and its subfolders to process all PDF files in one run.
 - **GUI and command-line modes** — Provides both a graphical user interface and a command-line interface for different usage scenarios.
 - **Parallel processing** — Uses Java parallel streams to improve performance when processing large collections of papers.
-- **Safer renaming workflow** — In GUI mode, you can preview the proposed rename results before confirming the operation, reducing the risk of accidental changes.
+- **Safer renaming workflow** — In GUI mode, you can preview the proposed rename results before confirming the operation, reducing the risk of accidental changes. PDFs whose file names already match the detected title are marked as unchanged and remain unchecked by default.
 
 ## Background
 
@@ -30,7 +30,7 @@ If Mr. Bingning Wang believes that publishing this code is inappropriate, the re
 
 ### Runtime Requirement
 
-A Java runtime environment is required to run the generated JAR files. The project documentation records the following Java environment as the compilation environment:
+A Java runtime environment (Java 21 or newer) is required to run the generated JAR files, which are compiled with `--release 21`. The project documentation records the following Java environment as the compilation environment:
 
 ```text
 java version "26.0.1" 2026-04-21
@@ -75,6 +75,7 @@ The table uses colors to show status:
 
 - Green: the file has been renamed successfully.
 - Red: the file failed or was skipped.
+- Gray: no change needed (the file name already matches the detected title; unchecked by default).
 
 ### Option 2: Command Line
 
@@ -118,11 +119,12 @@ src/nlpr/cip/
 
 | Library | Version | Purpose |
 | --- | --- | --- |
-| [Apache PDFBox](https://pdfbox.apache.org/) | 2.0.23 | PDF parsing and text extraction |
-| [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/) | 1.2 | Logging framework |
-| [FontBox](https://pdfbox.apache.org/) | 3.0.0-RC1 | PDF font information handling |
+| [Apache PDFBox](https://pdfbox.apache.org/) | 3.0.8 | PDF parsing and text extraction |
+| [FontBox](https://pdfbox.apache.org/) | 3.0.8 | PDF font information handling |
+| [PDFBox IO](https://pdfbox.apache.org/) | 3.0.8 | Random-access IO module required by PDFBox 3 |
+| [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/) | 1.4.0 | Logging framework |
 
-The repository also includes related JAR dependencies such as `pdfbox-app-2.0.23.jar`, `commons-logging-1.2.jar`, and `fontbox-3.0.0-RC1.jar`.
+The repository also includes the corresponding JAR dependencies such as `pdfbox-3.0.8.jar`, `fontbox-3.0.8.jar`, `pdfbox-io-3.0.8.jar`, and `commons-logging-1.4.0.jar`.
 
 ## Notes and Limitations
 
